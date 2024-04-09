@@ -1,13 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href={% static "css/style.css" %}>
-</head>
+{% include "partials/head.html" %}
 <body>
-    {% block contacts %}{% endblock contacts %}
+    {% include "partials/header.html" %}
+
+    <main class="content">
+        {% block index %}{% endblock index %}
+        {% block single_contact %}{% endblock single_contact %}
+    </main>
 </body>
 </html>

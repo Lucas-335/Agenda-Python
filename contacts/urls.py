@@ -1,5 +1,8 @@
-from django.urls import path, include
+from django.urls import path
 import views
-urlpatterns = [
-    path('', views.contacts)
+
+app_name = 'contacts'
+urlpatterns = [   
+    path('<int:cont_id>', views.single_contact, name='single_contact'),
+    path('', views.index, name='index'),
 ]
