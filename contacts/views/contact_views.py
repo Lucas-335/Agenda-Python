@@ -41,7 +41,7 @@ def single_contact(requests,cont_id):
 
 def search(request):
     search_query = request.GET.get('q','').strip()
-
+    print(request.GET.get('q',''))
     if search_query == '':
         return redirect('contacts:index')
     
