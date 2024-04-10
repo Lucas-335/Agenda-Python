@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block index %}
-    
+    {% if contact %}    
     <div class="responsible-table">
         <table class="contacts-table">
             <caption class="table-caption">Contacts</caption>
@@ -40,5 +40,12 @@
                 {% endfor %}
             </tbody>
         </table>
-    </div>    
+    </div>
+    {% else %}
+        <div class="single-content">
+            <h1 class="single-content-name">
+                Contato não encontrado
+            </h1>
+        </div>
+    {% endif %} 
 {% endblock index %}
